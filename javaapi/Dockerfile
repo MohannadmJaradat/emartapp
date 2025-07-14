@@ -1,3 +1,6 @@
+# muli stage docker file, first stage is to build the artifact, and the second one is to copy the artifact into
+# our main image and use it.
+
 FROM openjdk:8 AS BUILD_IMAGE
 WORKDIR /usr/src/app/
 RUN apt update && apt install maven -y

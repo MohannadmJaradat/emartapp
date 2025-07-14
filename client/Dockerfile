@@ -1,3 +1,7 @@
+# muli stage docker file, first stage is to build the artifact, and the second one is to copy the artifact into
+# our main image (nginx) and use it.
+
+# Angular application will be built on node image
 FROM node:14 AS web-build
 WORKDIR /usr/src/app
 COPY ./ ./client

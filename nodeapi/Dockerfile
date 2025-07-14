@@ -1,3 +1,6 @@
+# muli stage docker file, first stage is to build the artifact, and the second one is to copy the artifact into
+# our main image and use it.
+
 FROM node:14 AS nodeapi-build
 WORKDIR /usr/src/app
 COPY ./ ./nodeapi/
